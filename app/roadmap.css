@@ -1,0 +1,535 @@
+.learning-roadmap {
+  display: grid;
+  gap: 24px;
+}
+.roadmap-overview {
+  padding: 28px;
+}
+.roadmap-overview h2 {
+  font-size: 23px;
+  letter-spacing: -0.7px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.roadmap-overall {
+  background: #f1e9ff;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #8155be;
+  white-space: nowrap;
+}
+.roadmap-overview > p {
+  font-size: 13px;
+  max-width: 790px;
+  line-height: 1.9;
+  margin: 16px 0 20px;
+}
+.learning-roadmap progress {
+  display: block;
+  width: 100%;
+  height: 7px;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  appearance: none;
+  background: #eee8f6;
+  color: #9671dc;
+}
+.learning-roadmap progress::-webkit-progress-bar {
+  background: #eee8f6;
+  border-radius: 8px;
+}
+.learning-roadmap progress::-webkit-progress-value {
+  background: #9671dc;
+  border-radius: 8px;
+}
+.learning-roadmap progress::-moz-progress-bar {
+  background: #9671dc;
+  border-radius: 8px;
+}
+.roadmap-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 11px;
+  color: #9b83b0;
+  margin-top: 15px;
+}
+.roadmap-stats > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.study-guide {
+  margin-top: 24px;
+  padding-top: 21px;
+  border-top: 1px solid #eee7f6;
+}
+.study-guide summary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #8965b5;
+  font-weight: 750;
+  list-style: none;
+}
+.study-guide p {
+  font-size: 12px;
+  margin-top: 15px;
+  line-height: 1.9;
+}
+.study-guide a {
+  color: #885ac1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.study-guide summary > svg:last-child {
+  margin-left: auto;
+}
+.roadmap-milestone {
+  overflow: hidden;
+}
+.roadmap-milestone > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 23px 25px;
+  display: grid;
+  grid-template-columns: 40px 1fr auto 19px;
+  gap: 17px;
+  align-items: center;
+}
+.learning-roadmap summary::-webkit-details-marker {
+  display: none;
+}
+.roadmap-milestone .milestone-number {
+  background: #f2eaff;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 43px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.milestone-label,
+.week-label {
+  min-width: 0;
+}
+.milestone-label h3 {
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+.milestone-label > span {
+  display: block;
+  font-size: 11px;
+  color: #a18bad;
+  margin-top: 5px;
+}
+.milestone-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.milestone-summary strong {
+  color: #9772c2;
+  font-size: 16px;
+}
+.milestone-summary span {
+  font-size: 10px;
+  color: #a68db5;
+}
+.expand-chevron {
+  color: #b29bc6;
+  transition: transform 0.2s;
+}
+.roadmap-milestone[open] > summary > .expand-chevron,
+.roadmap-week[open] > summary > .expand-chevron {
+  transform: rotate(90deg);
+}
+.milestone-content {
+  padding: 0 25px 23px;
+  border-top: 1px solid #f3edf8;
+}
+.milestone-objectives {
+  padding: 24px 0;
+}
+.milestone-objectives h4 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: #6d4e89;
+}
+.milestone-objectives h4 svg {
+  color: #ab8ac8;
+}
+.learning-roadmap ul {
+  padding-left: 19px;
+  font-size: 12px;
+  color: #8d759f;
+  line-height: 1.9;
+  margin: 12px 0;
+}
+.milestone-objectives progress {
+  margin-top: 15px;
+}
+.roadmap-week {
+  border: 1px solid #ece3f5;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+.roadmap-week > summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 65px 1fr auto 16px;
+  align-items: center;
+  gap: 13px;
+  padding: 19px 17px;
+}
+.week-tag {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  color: #a284bb;
+  background: #f5effc;
+  padding: 7px 6px;
+  border-radius: 5px;
+  text-align: center;
+}
+.week-label h4 {
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.7;
+  color: #5f4378;
+}
+.week-label > span {
+  display: block;
+  font-size: 10px;
+  color: #ac96bc;
+  margin-top: 3px;
+}
+.week-count {
+  font-size: 10px;
+  color: #9f84b5;
+  white-space: nowrap;
+}
+.week-content {
+  padding: 0 17px 20px;
+  border-top: 1px solid #f0e8f8;
+}
+.week-content > h5 {
+  font-size: 12px;
+  color: #84619e;
+  margin: 19px 0 0;
+  font-weight: 800;
+}
+.week-content > ul {
+  font-size: 11px;
+}
+.daily-plan-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 22px 0 6px;
+}
+.daily-plan-heading h5 {
+  font-size: 12px;
+  color: #84619e;
+  margin: 0;
+  font-weight: 800;
+}
+.daily-plan-heading > span {
+  font-size: 9px;
+  color: #ae96bf;
+}
+.daily-plans {
+  margin-bottom: 23px;
+}
+.daily-plan {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-bottom: 1px solid #f2edf7;
+  padding: 17px 0;
+  margin: 0;
+  cursor: pointer;
+}
+.daily-plan:last-child {
+  border-bottom: 0;
+}
+.daily-plan input {
+  appearance: auto;
+  accent-color: #9470d7;
+  display: block;
+  width: 17px;
+  height: 17px;
+  margin: 3px 0 0;
+  flex-shrink: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.plan-day {
+  font-size: 10px;
+  color: #8e6aaa;
+  font-weight: 800;
+  min-width: 60px;
+  line-height: 1.7;
+}
+.plan-day small {
+  display: block;
+  font-size: 6px;
+  font-weight: 650;
+  letter-spacing: 0.7px;
+  color: #bba8c9;
+  margin-top: 4px;
+}
+.plan-task {
+  font-size: 12px;
+  line-height: 1.85;
+  color: #6e557f;
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+}
+.plan-state {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 8px;
+  white-space: nowrap;
+  min-width: 39px;
+  color: #b7a2c5;
+  margin-top: 4px;
+}
+.plan-complete .plan-state {
+  color: #72a98d;
+}
+.plan-complete .plan-task {
+  color: #ac98ba;
+}
+.plan-complete .plan-day {
+  color: #9db4a7;
+}
+.roadmap-note {
+  font-size: 11px;
+  font-weight: 750;
+  color: #9271ad;
+  margin: 23px 0 0;
+}
+.roadmap-note textarea {
+  font-size: 12px;
+  line-height: 1.8;
+  background: #fdfbff;
+  border-color: #e9dff4;
+  resize: vertical;
+  min-height: 88px;
+}
+.milestone-note {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #eee6f7;
+}
+.roadmap-save-status {
+  font-size: 10px;
+  margin-top: 11px;
+  color: #ac97bb;
+}
+.roadmap-milestone > summary:hover,
+.roadmap-week > summary:hover {
+  background: #fdfaff;
+}
+.roadmap-milestone[open] > summary {
+  background: #fcf9ff;
+}
+.learning-roadmap summary:focus-visible {
+  outline-offset: -4px;
+  border-radius: 10px;
+}
+@media (max-width: 1050px) {
+  .roadmap-overview h2 {
+    font-size: 20px;
+  }
+  .roadmap-milestone > summary {
+    gap: 12px;
+    padding: 21px;
+  }
+  .milestone-content {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+  .milestone-label h3 {
+    font-size: 14px;
+  }
+  .roadmap-week > summary {
+    gap: 9px;
+    padding: 17px 13px;
+    grid-template-columns: 59px 1fr auto 14px;
+  }
+  .week-label h4 {
+    font-size: 12px;
+  }
+  .week-label > span {
+    font-size: 9px;
+  }
+  .plan-day {
+    min-width: 49px;
+  }
+  .plan-task {
+    font-size: 11px;
+  }
+  .plan-state {
+    display: none;
+  }
+}
+@media (max-width: 580px) {
+  .learning-roadmap {
+    gap: 18px;
+  }
+  .roadmap-overview {
+    padding: 22px 18px;
+  }
+  .roadmap-overview .card-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .roadmap-overview h2 {
+    font-size: 21px;
+  }
+  .roadmap-overall {
+    font-size: 10px;
+    padding: 7px 9px;
+  }
+  .roadmap-overview > p {
+    font-size: 12px;
+    margin: 14px 0 19px;
+  }
+  .roadmap-stats {
+    font-size: 10px;
+    gap: 9px;
+    line-height: 1.6;
+  }
+  .study-guide p {
+    font-size: 11px;
+  }
+  .roadmap-milestone > summary {
+    padding: 18px 14px;
+    grid-template-columns: 32px 1fr auto 13px;
+    gap: 10px;
+  }
+  .roadmap-milestone .milestone-number {
+    width: 32px;
+    height: 37px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  .milestone-label h3 {
+    font-size: 13px;
+  }
+  .milestone-label > span {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+  .milestone-summary strong {
+    font-size: 14px;
+  }
+  .milestone-summary span {
+    font-size: 8px;
+  }
+  .milestone-content {
+    padding: 0 13px 20px;
+  }
+  .milestone-objectives {
+    padding: 19px 0;
+  }
+  .milestone-objectives h4 {
+    font-size: 12px;
+  }
+  .learning-roadmap ul {
+    font-size: 11px;
+  }
+  .roadmap-week > summary {
+    padding: 15px 11px;
+    grid-template-columns: 50px 1fr 13px;
+    gap: 8px;
+  }
+  .week-tag {
+    font-size: 8px;
+    padding: 6px 4px;
+    grid-row: 1/3;
+  }
+  .week-label h4 {
+    font-size: 12px;
+  }
+  .week-label > span {
+    font-size: 8px;
+    line-height: 1.8;
+  }
+  .week-count {
+    font-size: 9px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .roadmap-week > summary > .expand-chevron {
+    grid-column: 3;
+    grid-row: 1/3;
+  }
+  .week-content {
+    padding: 0 10px 17px;
+  }
+  .week-content > ul {
+    font-size: 10px;
+  }
+  .daily-plan-heading {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .daily-plan-heading h5 {
+    font-size: 11px;
+  }
+  .daily-plan-heading > span {
+    font-size: 8px;
+  }
+  .daily-plan {
+    gap: 8px;
+    padding: 15px 0;
+  }
+  .daily-plan input {
+    width: 16px;
+    height: 16px;
+  }
+  .plan-day {
+    min-width: 40px;
+    font-size: 9px;
+  }
+  .plan-day small {
+    font-size: 5px;
+    letter-spacing: 0.3px;
+  }
+  .plan-task {
+    font-size: 11px;
+    line-height: 1.9;
+  }
+  .roadmap-note {
+    font-size: 10px;
+  }
+  .roadmap-note textarea {
+    font-size: 11px;
+    padding: 10px;
+  }
+  .roadmap-save-status {
+    font-size: 9px;
+  }
+}
